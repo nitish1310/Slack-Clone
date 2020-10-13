@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ChatInput.css";
-import { Button } from "@material-ui/core";
+
 import db from "./firebase";
 import { useStateValue } from "./StateProvider";
 import firebase from "firebase";
@@ -10,14 +10,15 @@ function ChatInput({ channelName, channelId }) {
   const [{ user }] = useStateValue();
 
   const sendMessage = (e) => {
+    //prevent page to reload after button click
     e.preventDefault();
 
     if (channelId) {
-      db.collection("rooms").doc(channelId).collection("messages")({
+      db.collection("rooms").doc(channelId).collection("messages").add({
         message: input,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         user: user.displayName,
-        useImage: user.photoURL,
+        userImage: user.photoURL,
       });
     }
 

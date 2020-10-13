@@ -27,11 +27,12 @@ function Login() {
     <div className="login">
       <div className="login__container">
         <img
-          src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png"
+          // src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png"
+          src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/2019-01_BrandRefresh_Old-to-New-Final.gif"
           alt="Slack Logo"
         />
-        <h1>Sign in to Clever Programmer HQ</h1>
-        <p>cleverprogrammer.slack.com</p>
+        <h1>Sign in to Cloud Computing HQ</h1>
+        <p>cloudcomputing.slack.com</p>
         <Button onClick={signIn}>Sign in with Google</Button>
       </div>
     </div>

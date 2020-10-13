@@ -3,8 +3,27 @@
   background-color: var(--slack-color);
   border-top: 1px solid #49274b;
   width: 260px;
+  /* overflow-y: scroll; */
+  margin-bottom: 70px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 245, 245, 0.3) #3f0f40;
 }
 
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #3f0f40;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 245, 245, 0.3);
+  border-radius: 20px;
+  border: 3px solid #3f0f40;
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
 .sidebar > hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -13,9 +32,17 @@
 
 .sidebar__header {
   display: flex;
+  background-color: var(--slack-color);
   border-bottom: 1px solid #49274b;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding: 13px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.sidebar__createIcon {
+  cursor: pointer;
 }
 
 .sidebar__info {

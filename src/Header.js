@@ -12,14 +12,13 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left">
-        {/* Avatar */}
-
-        <Avatar
-          className="header__avatar"
-          alt={user?.displayName}
-          src={user?.photoURL}
-        />
         {/* alt={user?.displayName} src={user?.photoURL} */}
+
+        <img
+          className="header__logo"
+          src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/2019-01_BrandRefresh_Old-to-New-Final.gif"
+        />
+
         {/* Time Icon */}
         <AccessTimeIcon />
       </div>
@@ -33,6 +32,15 @@ function Header() {
       <div className="header__right">
         {/* help icon */}
         <HelpOutlineIcon />
+      </div>
+      <div className="header__avatar">
+        {/* Avatar */}
+
+        <Avatar
+          className="header__avatar"
+          alt={user?.displayName}
+          src={user?.photoURL}
+        />
       </div>
     </div>
   );

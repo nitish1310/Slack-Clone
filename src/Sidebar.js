@@ -37,13 +37,13 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__info">
-          <h2>Clever Programmer</h2>
+          <h2>Cloud Computing</h2>
           <h3>
             <FiberManualRecordIcon />
             {user?.displayName}
           </h3>
         </div>
-        <CreateIcon />
+        <CreateIcon className="sidebar__createIcon" />
       </div>
       <SidebarOption Icon={InsertCommentIcon} title="Threads" />
       <SidebarOption Icon={InboxIcon} title="Mentions & reactions" />

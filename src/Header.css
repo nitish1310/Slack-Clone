@@ -7,6 +7,13 @@
   color: white;
 }
 
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  /* margin: 0 20px;
+  margin-top: 18px; */
+}
+
 .header__left {
   flex: 0.3;
   display: flex;
@@ -43,6 +50,10 @@
 }
 
 .header__right > .MuiSvgIcon-root {
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: 20px;
+}
+
+.header__avatar {
+  margin-right: 5px;
 }
